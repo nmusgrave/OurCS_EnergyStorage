@@ -20,3 +20,22 @@ d3.csv("fourPeople_EnergyProfiles.csv", function(d) {
        }, function(d) {
        console.log(d[0]);
        });
+
+$(document).ready(function(){
+    //$("#energy_profile_table td.neg_pos:contains('500')").css('background-color','#fcc');
+//*
+    $('#energy_profile_table td.neg_pos').each(function(){
+        if ($(this).text().contains('500')) {
+            $(this).css('background-color','#f00');
+        }
+    });
+//*/
+});
+
+$(document).ready(function(){
+    $('#table_id td.y_n').each(function(){
+        if ($(this).text() == 'N') {
+            $(this).css('background-color','#f00');
+        }
+    });
+});
